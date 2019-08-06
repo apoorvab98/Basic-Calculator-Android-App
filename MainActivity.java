@@ -180,51 +180,20 @@ public class MainActivity extends AppCompatActivity {
                 int b;
                 //boolean b;
                 String str = edt1.getText().toString();
-             /*   b = Pattern.matches("^([0-9]+[.]?[0-9]*?)[[-*+/]?[0-9]+[.]?[0-9]*]*", str);
-
-                b=Pattern.matches("^([0-9]+[.]?[0-9]*)[[-*+/]?[0-9]+[.]?[0-9]*]*",str);
-                if(!b) {
-                    Toast.makeText(getApplicationContext(),"Invalid Expression",Toast.LENGTH_LONG).show();
-                }
-
-                if (!b) {
-                    Toast.makeText(getApplicationContext(), "Invalid Expression", Toast.LENGTH_LONG).show();
-                } else {*/
-              /* b = Pattern.matches("^\\s*([-+]?)(\\d+)(?:\\s*([-+/])\\s((?:\\s[-+])?\\d+)\\s*)+$", str);
-                if (!b) {
-                    Toast.makeText(getApplicationContext(), "Invalid Expression", Toast.LENGTH_LONG).show();
-                }*/
               if(str.contains("..")||str.contains("++")||str.contains("--")||str.contains("**")||str.contains("//")||str.contains("+-")||str.contains("*-")||str.contains("/-")||str.contains("/+")||str.contains("/*")||str.contains("+++"))
-               // b=Pattern.matches("^([0-9]+[.]?[0-9]*)([-*+/]?[0-9]+[.]?[0-9]*)*",str);//checking a valid expression using regex if there is correct occurence of operations
               {
-               // if(!b) {
                     Toast.makeText(getApplicationContext(),"Invalid Expression",Toast.LENGTH_LONG).show();
-                }
+              }
 
 
                  else {
                     double p1 = bodmas(str);
                     String p = Double.toString(p1);
                     edt1.setText(p);
-
-
-                    //  }
                 }
             }
 
-        /*Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-        @Override
-        public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                .setAction("Action", null).show();
-                }
-                });*/
-
-
+     
         });
     }
     //bodmas
